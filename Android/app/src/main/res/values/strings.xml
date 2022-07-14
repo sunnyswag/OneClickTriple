@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">OneClickTriple</string>
+    <string name="like_btn">like</string>
+    <string name="coin_btn">coin</string>
+    <string name="collect_btn">collect</string>
+    <string name="numbers_demo1">2万</string>
+    <string name="numbers_demo2">3万</string>
+    <string name="numbers_demo3">1.2万</string>
+    <string name="numbers_demo4">2.3万</string>
+    <string name="share_btn">share</string>
 </resources>

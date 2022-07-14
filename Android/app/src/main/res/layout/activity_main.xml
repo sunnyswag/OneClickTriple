@@ -6,11 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        tools:ignore="MissingConstraints"
-        android:contentDescription="like"
-        android:src="@drawable/ic_like" />
+    <com.example.oneclicktriple.view.ItemView
+        android:id="@+id/likeItem"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:contentDescription="@string/like_btn"
+        android:layout_marginStart="@dimen/item_horizontal_margin"
+        app:icon_numbers="@string/numbers_demo1"
+        app:icon_src="@drawable/ic_like"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <com.example.oneclicktriple.view.ItemView
+        android:id="@+id/coinItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/coin_btn"
+        app:icon_numbers="@string/numbers_demo2"
+        app:icon_src="@drawable/ic_coin"
+        app:layout_constraintStart_toEndOf="@id/likeItem"
+        app:layout_constraintTop_toTopOf="@id/likeItem" />
+
+    <com.example.oneclicktriple.view.ItemView
+        android:id="@+id/collectItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/collect_btn"
+        app:icon_numbers="@string/numbers_demo3"
+        app:icon_src="@drawable/ic_collect"
+        app:layout_constraintStart_toEndOf="@id/coinItem"
+        app:layout_constraintTop_toTopOf="@id/likeItem" />
+
+    <com.example.oneclicktriple.view.ItemView
+        android:id="@+id/collectShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/share_btn"
+        app:icon_numbers="@string/numbers_demo4"
+        app:icon_src="@drawable/ic_share"
+        app:layout_constraintStart_toEndOf="@id/collectItem"
+        app:layout_constraintTop_toTopOf="@id/likeItem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

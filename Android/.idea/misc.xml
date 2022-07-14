@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/huiqinhuang/Desktop/Git/OneClickTriple/Android/app/src/main/res/drawable/ic_coin.xml" value="0.19" />
         <entry key="..\:/Users/huiqinhuang/Desktop/Git/OneClickTriple/Android/app/src/main/res/drawable/ic_collect.xml" value="0.121" />
         <entry key="..\:/Users/huiqinhuang/Desktop/Git/OneClickTriple/Android/app/src/main/res/drawable/ic_like.xml" value="0.121" />
+        <entry key="..\:/Users/huiqinhuang/Desktop/Git/OneClickTriple/Android/app/src/main/res/drawable/ic_share.xml" value="0.19" />
         <entry key="..\:/Users/huiqinhuang/Desktop/Git/OneClickTriple/Android/app/src/main/res/drawable/like.xml" value="0.1495" />
         <entry key="..\:/Users/huiqinhuang/Desktop/Git/OneClickTriple/Android/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/huiqinhuang/Desktop/Git/OneClickTriple/Android/app/src/main/res/layout/item_view.xml" value="0.25" />
       </map>
     </option>
   </component>
