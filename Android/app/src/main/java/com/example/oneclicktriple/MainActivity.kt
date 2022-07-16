@@ -10,9 +10,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val itemView = ItemView(ITEM_LIST.size, this)
-        itemView.updateIconNumbers(ITEM_LIST)
-        findViewById<ConstraintLayout>(R.id.rootView).addView(itemView)
+        ItemView(ITEM_LIST.size, this).let {
+            it.updateIconNumbers(ITEM_LIST)
+            findViewById<ConstraintLayout>(R.id.rootView).addView(it)
+        }
     }
 
     companion object{
@@ -20,6 +21,6 @@ class MainActivity : AppCompatActivity() {
             Pair(R.drawable.ic_like, "2万"),
             Pair(R.drawable.ic_coin, "3万"),
             Pair(R.drawable.ic_collect, "4万"),
-            Pair(R.drawable.ic_share, "5万"), )
+            Pair(R.drawable.ic_share, "5万"))
     }
 }

@@ -5,15 +5,15 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
-import android.view.View
+import androidx.appcompat.widget.AppCompatImageView
 
-class CircleAnimView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
+class CircleAnimView(context: Context, attrs: AttributeSet?) : AppCompatImageView(context, attrs) {
 
     private val mPaint = Paint(Paint.ANTI_ALIAS_FLAG)
 
     init {
         mPaint.color = Color.parseColor("#e17c99")
-        mPaint.strokeWidth = 6F
+        mPaint.strokeWidth = 8F
         mPaint.style = Paint.Style.STROKE
     }
 
