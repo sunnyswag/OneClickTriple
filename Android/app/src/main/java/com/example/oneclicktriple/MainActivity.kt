@@ -10,7 +10,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<ConstraintLayout>(R.id.rootView).addView(ItemView(ITEM_LIST, this))
+        val itemView = ItemView(ITEM_LIST.size, this)
+        itemView.updateIconNumbers(ITEM_LIST)
+        findViewById<ConstraintLayout>(R.id.rootView).addView(itemView)
     }
 
     companion object{
