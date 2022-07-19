@@ -1,5 +1,6 @@
 package com.example.oneclicktriple.view
 
+import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.widget.ImageView
@@ -29,10 +30,17 @@ class ItemView(itemNum: Int, context: Context?) : LinearLayout(context) {
         for (i in 0 until childCount) {
             val child = getChildAt(i)
 
-            child.findViewById<ImageView>(R.id.icon).apply {
+            child.findViewById<ImageView>(R.id.icon)?.apply {
                 setImageResource(itemList[i].first)
+                setOnClickListener {
+                    ObjectAnimator.ofFloat(it, "sweepAngle", 360F).apply {
+                        duration = 3000
+                        startDelay = 300
+                        start()
+                    }
+                }
             }
-            child.findViewById<TextView>(R.id.numbers).apply {
+            child.findViewById<TextView>(R.id.numbers)?.apply {
                 text = itemList[i].second
             }
 

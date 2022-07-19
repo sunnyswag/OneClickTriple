@@ -10,28 +10,31 @@ import com.example.oneclicktriple.Utils
 class CircleAnimView(context: Context, attrs: AttributeSet?) : AppCompatImageView(context, attrs) {
 
     private val mPaint = Paint(Paint.ANTI_ALIAS_FLAG)
-    private val arcRect : RectF
+    private var sweepAngle: Float = 0.0f
+        get() = field
+        set(value) {
+            field = value
+            invalidate()
+        }
 
     init {
         mPaint.apply {
             color = Color.parseColor("#e17c99")
-            strokeWidth = 8F
+            strokeWidth = STROKE_WIDTH
             style = Paint.Style.STROKE
         }
-
-        arcRect = RectF((width / 2).toFloat() - RADIUS, (height / 2).toFloat() - RADIUS,
-            (width / 2).toFloat() + RADIUS, (height / 2).toFloat() + RADIUS)
-        Log.d("huiqing", arcRect.toString() + "width / 2: ${height / 2}, width / 2: ${height / 2}")
     }
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
-        Log.d("huiqing", arcRect.toString() + "width / 2: ${height / 2}, width / 2: ${height / 2}")
-        canvas?.drawArc(arcRect,
-            0F, 360F, true, mPaint)
+        canvas?.drawArc((width / 2).toFloat() - RADIUS, (height / 2).toFloat() - RADIUS,
+            (width / 2).toFloat() + RADIUS, (height / 2).toFloat() + RADIUS,
+            INITIAL_ANGLE, sweepAngle, false, mPaint)
     }
 
     companion object{
-        val RADIUS = Utils.dp2px(15F) // 半径
+        val RADIUS = Utils.dp2px(17F) // 半径
+        val STROKE_WIDTH = Utils.dp2px(2F) // 半径
+        const val INITIAL_ANGLE = 270F // 初始角度
     }
 }
